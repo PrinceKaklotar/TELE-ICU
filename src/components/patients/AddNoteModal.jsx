@@ -48,7 +48,7 @@ export default function AddNoteModal({ isOpen, onClose, patient }) {
         <div className="flex items-center justify-between pt-2">
           <div className="flex items-center gap-1.5 text-xs text-slate-400">
             <User className="w-3.5 h-3.5" />
-            <span>Author: Sarah Johnson, RN (Tele-ICU)</span>
+            <span>Author: Pooja Patel, RN (Tele-ICU)</span>
           </div>
 
           <div className="flex items-center gap-2">

@@ -2,44 +2,44 @@
 
 export const TEAM_MEMBERS = [
   {
-    id: "user-sarah",
-    name: "Sarah Johnson",
+    id: "user-pooja",
+    name: "Pooja Patel",
     role: "Tele-ICU Nurse",
-    avatar: "SJ",
+    avatar: "PP",
     status: "online",
     badgeColor: "bg-emerald-500"
   },
   {
-    id: "user-michael",
-    name: "Dr. Michael Brown",
+    id: "user-rajesh",
+    name: "Dr. Rajesh Shah",
     role: "Remote ICU Doctor",
-    avatar: "MB",
+    avatar: "RS",
     status: "online",
     badgeColor: "bg-blue-500"
   },
   {
-    id: "user-emily",
-    name: "Emily Davis",
+    id: "user-hetal",
+    name: "Hetal Patel",
     role: "Bedside ICU Nurse",
-    avatar: "ED",
+    avatar: "HP",
     status: "busy",
     badgeColor: "bg-amber-500"
   },
   {
-    id: "user-james",
-    name: "James Wilson",
+    id: "user-chirag",
+    name: "Chirag Shah",
     role: "Bedside ICU Nurse",
-    avatar: "JW",
+    avatar: "CS",
     status: "online",
     badgeColor: "bg-emerald-500"
   }
 ];
 
 export const QUICK_TEMPLATES = [
-  "Please review the patient update.",
+  "Please review ICU-003.",
   "Can you confirm the bedside assessment?",
-  "Follow-up required for this patient.",
-  "Please provide the latest status.",
+  "Please share the latest patient update.",
+  "Follow-up required for this bed.",
   "Titrating infusion per protocol. Awaiting bedside confirmation.",
   "ABG results noted; physician review in progress."
 ];
@@ -48,11 +48,11 @@ export const INITIAL_CONVERSATIONS = [
   {
     id: "conv-1",
     patientId: "ICU-003",
-    patientName: "Arthur Pendelton",
+    patientName: "Ramesh Patel",
     bed: "Bed 03-A",
     teamMember: {
-      id: "user-emily",
-      name: "Emily Davis",
+      id: "user-hetal",
+      name: "Hetal Patel",
       role: "Bedside ICU Nurse"
     },
     unreadCount: 1,
@@ -60,26 +60,26 @@ export const INITIAL_CONVERSATIONS = [
     messages: [
       {
         id: "m-101",
-        senderId: "user-sarah",
-        senderName: "Sarah Johnson",
+        senderId: "user-pooja",
+        senderName: "Pooja Patel",
         senderRole: "Tele-ICU Nurse",
-        text: "Emily, ICU-003 Arthur's heart rate has climbed to 138 bpm with BP 84/52. MAP is 62. Telemetry shows sustained sinus tachycardia.",
+        text: "Hetal, ICU-003 Ramesh's heart rate has climbed to 138 bpm with BP 84/52. MAP is 62. Telemetry shows sustained sinus tachycardia.",
         timestamp: "23:18",
         status: "read"
       },
       {
         id: "m-102",
-        senderId: "user-emily",
-        senderName: "Emily Davis",
+        senderId: "user-hetal",
+        senderName: "Hetal Patel",
         senderRole: "Bedside ICU Nurse",
-        text: "Copy that Sarah. I am at the bedside right now. Checking peripheral perfusion and flushing IV lines. Norepinephrine titration started.",
+        text: "Copy that Pooja. I am at the bedside right now. Checking peripheral perfusion and flushing IV lines. Norepinephrine titration started.",
         timestamp: "23:20",
         status: "read"
       },
       {
         id: "m-103",
-        senderId: "user-michael",
-        senderName: "Dr. Michael Brown",
+        senderId: "user-rajesh",
+        senderName: "Dr. Rajesh Shah",
         senderRole: "Remote ICU Doctor",
         text: "I am reviewing his arterial line waveform from remote station. Let's aim for MAP >= 65 and draw repeat lactate.",
         timestamp: "23:22",
@@ -87,10 +87,10 @@ export const INITIAL_CONVERSATIONS = [
       },
       {
         id: "m-104",
-        senderId: "user-emily",
-        senderName: "Emily Davis",
+        senderId: "user-hetal",
+        senderName: "Hetal Patel",
         senderRole: "Bedside ICU Nurse",
-        text: "Understood Dr. Brown. Norepinephrine increased to 0.10 mcg/kg/min. Drawing blood now.",
+        text: "Understood Dr. Shah. Norepinephrine increased to 0.10 mcg/kg/min. Drawing blood now.",
         timestamp: "23:25",
         status: "delivered"
       }
@@ -99,11 +99,11 @@ export const INITIAL_CONVERSATIONS = [
   {
     id: "conv-2",
     patientId: "ICU-005",
-    patientName: "David Chen",
+    patientName: "Bhavesh Joshi",
     bed: "Bed 05-B",
     teamMember: {
-      id: "user-emily",
-      name: "Emily Davis",
+      id: "user-hetal",
+      name: "Hetal Patel",
       role: "Bedside ICU Nurse"
     },
     unreadCount: 0,
@@ -111,17 +111,17 @@ export const INITIAL_CONVERSATIONS = [
     messages: [
       {
         id: "m-201",
-        senderId: "user-sarah",
-        senderName: "Sarah Johnson",
+        senderId: "user-pooja",
+        senderName: "Pooja Patel",
         senderRole: "Tele-ICU Nurse",
-        text: "Desaturation alert triggered for David Chen. SpO2 dropped to 89% with RR 28. Dr. Brown recommended BIPAP initiation.",
+        text: "Desaturation alert triggered for Bhavesh Joshi. SpO2 dropped to 89% with RR 28. Dr. Shah recommended BIPAP initiation.",
         timestamp: "23:08",
         status: "read"
       },
       {
         id: "m-202",
-        senderId: "user-emily",
-        senderName: "Emily Davis",
+        senderId: "user-hetal",
+        senderName: "Hetal Patel",
         senderRole: "Bedside ICU Nurse",
         text: "Respiratory therapy is in the room setting up BIPAP mask. Administered Lasix 80mg IV push.",
         timestamp: "23:14",
@@ -132,11 +132,11 @@ export const INITIAL_CONVERSATIONS = [
   {
     id: "conv-3",
     patientId: "ICU-002",
-    patientName: "Marcus Aurelius Vance",
+    patientName: "Raj Dobariya",
     bed: "Bed 02-B",
     teamMember: {
-      id: "user-james",
-      name: "James Wilson",
+      id: "user-chirag",
+      name: "Chirag Shah",
       role: "Bedside ICU Nurse"
     },
     unreadCount: 0,
@@ -144,17 +144,17 @@ export const INITIAL_CONVERSATIONS = [
     messages: [
       {
         id: "m-301",
-        senderId: "user-sarah",
-        senderName: "Sarah Johnson",
+        senderId: "user-pooja",
+        senderName: "Pooja Patel",
         senderRole: "Tele-ICU Nurse",
-        text: "James, temp spiked to 38.2°C for Marcus Vance. High-flow nasal cannula flow was increased.",
+        text: "Chirag, temp spiked to 38.2°C for Raj Dobariya. High-flow nasal cannula flow was increased.",
         timestamp: "22:52",
         status: "read"
       },
       {
         id: "m-302",
-        senderId: "user-james",
-        senderName: "James Wilson",
+        senderId: "user-chirag",
+        senderName: "Chirag Shah",
         senderRole: "Bedside ICU Nurse",
         text: "Patient received acetaminophen 1000mg IV. Sputum culture collected. ABG sample dispatched to lab.",
         timestamp: "22:56",
@@ -165,11 +165,11 @@ export const INITIAL_CONVERSATIONS = [
   {
     id: "conv-4",
     patientId: "ICU-001",
-    patientName: "Eleanor Vance",
+    patientName: "Hansaben Patel",
     bed: "Bed 01-A",
     teamMember: {
-      id: "user-michael",
-      name: "Dr. Michael Brown",
+      id: "user-rajesh",
+      name: "Dr. Rajesh Shah",
       role: "Remote ICU Doctor"
     },
     unreadCount: 0,
@@ -177,17 +177,17 @@ export const INITIAL_CONVERSATIONS = [
     messages: [
       {
         id: "m-401",
-        senderId: "user-sarah",
-        senderName: "Sarah Johnson",
+        senderId: "user-pooja",
+        senderName: "Pooja Patel",
         senderRole: "Tele-ICU Nurse",
-        text: "Dr. Brown, Eleanor Vance is 6 hours post-extubation, hemodynamically very stable. Step-down bed request placed.",
+        text: "Dr. Shah, Hansaben Patel is 6 hours post-extubation, hemodynamically very stable. Step-down bed request placed.",
         timestamp: "22:15",
         status: "read"
       },
       {
         id: "m-402",
-        senderId: "user-michael",
-        senderName: "Dr. Michael Brown",
+        senderId: "user-rajesh",
+        senderName: "Dr. Rajesh Shah",
         senderRole: "Remote ICU Doctor",
         text: "Agreed. I will sign the step-down transfer orders once evening rounds conclude.",
         timestamp: "22:20",

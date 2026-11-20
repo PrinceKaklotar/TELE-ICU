@@ -147,7 +147,7 @@ export function AppProvider({ children }) {
     {
       id: 'notif-1',
       title: 'Critical Alert: ICU-003',
-      message: 'Arthur Pendelton sustained ventricular tachycardia (HR 138).',
+      message: 'Ramesh Patel sustained ventricular tachycardia (HR 138).',
       time: '3 mins ago',
       read: false,
       type: 'critical'
@@ -155,14 +155,14 @@ export function AppProvider({ children }) {
     {
       id: 'notif-2',
       title: 'Critical Alert: ICU-005',
-      message: 'David Chen desaturation below 90% (SpO2 89%).',
+      message: 'Bhavesh Joshi desaturation below 90% (SpO2 89%).',
       time: '8 mins ago',
       read: false,
       type: 'critical'
     },
     {
       id: 'notif-3',
-      title: 'New Message from Emily Davis',
+      title: 'New Message from Hetal Patel',
       message: 'Norepinephrine titration started for Bed 03-A.',
       time: '15 mins ago',
       read: false,
@@ -232,7 +232,7 @@ export function AppProvider({ children }) {
           ...a,
           status: 'ACKNOWLEDGED',
           acknowledgedAt: 'Just now',
-          acknowledgedBy: 'Sarah Johnson (Tele-ICU)'
+          acknowledgedBy: 'Pooja Patel (Tele-ICU)'
         };
       }
       return a;
@@ -243,7 +243,7 @@ export function AppProvider({ children }) {
       patientId: alert.patientId,
       patientName: alert.patientName,
       description: `Alert ${alert.id} (${alert.type}) acknowledged. Tele-ICU nurse reviewed event.`,
-      actor: 'Sarah Johnson (Tele-ICU)',
+      actor: 'Pooja Patel (Tele-ICU)',
       badge: 'badge-purple'
     });
 
@@ -264,7 +264,7 @@ export function AppProvider({ children }) {
           ...a,
           status: 'RESOLVED',
           resolvedAt: 'Just now',
-          resolvedBy: 'Sarah Johnson (Tele-ICU)',
+          resolvedBy: 'Pooja Patel (Tele-ICU)',
           resolutionNote
         };
       }
@@ -276,7 +276,7 @@ export function AppProvider({ children }) {
       patientId: alert.patientId,
       patientName: alert.patientName,
       description: `Alert ${alert.id} resolved: ${resolutionNote || 'Clinical event documented and resolved.'}`,
-      actor: 'Sarah Johnson (Tele-ICU)',
+      actor: 'Pooja Patel (Tele-ICU)',
       badge: 'badge-green'
     });
 
@@ -304,7 +304,7 @@ export function AppProvider({ children }) {
       patientId: newTask.patientId,
       patientName: newTask.patientName,
       description: `Follow-up ${newTask.id} assigned to ${newTask.assignedTo}: ${newTask.description.slice(0, 50)}...`,
-      actor: 'Sarah Johnson (Tele-ICU)',
+      actor: 'Pooja Patel (Tele-ICU)',
       badge: 'badge-amber'
     });
 
@@ -330,7 +330,7 @@ export function AppProvider({ children }) {
         patientId: task.patientId,
         patientName: task.patientName,
         description: `Task ${task.id} updated to status "${newStatus}".`,
-        actor: 'Sarah Johnson (Tele-ICU)',
+        actor: 'Pooja Patel (Tele-ICU)',
         badge: newStatus === 'COMPLETED' ? 'badge-green' : 'badge-blue'
       });
     }
@@ -358,8 +358,8 @@ export function AppProvider({ children }) {
     const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     const newMsg = {
       id: `m-${Date.now()}`,
-      senderId: 'user-sarah',
-      senderName: 'Sarah Johnson',
+      senderId: 'user-pooja',
+      senderName: 'Pooja Patel',
       senderRole: 'Tele-ICU Nurse',
       text: text.trim(),
       timestamp: timeStr,
@@ -384,7 +384,7 @@ export function AppProvider({ children }) {
         patientId: targetConv.patientId,
         patientName: targetConv.patientName,
         description: `Sent message to ${targetConv.teamMember.name}: "${text.slice(0, 40)}..."`,
-        actor: 'Sarah Johnson (Tele-ICU)',
+        actor: 'Pooja Patel (Tele-ICU)',
         badge: 'badge-blue'
       });
     }
@@ -395,7 +395,7 @@ export function AppProvider({ children }) {
     const timeStr = `${new Date().toISOString().slice(0, 10)} ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
     const newNote = {
       id: `note-${Date.now()}`,
-      author: 'Sarah Johnson (Tele-ICU)',
+      author: 'Pooja Patel (Tele-ICU)',
       timestamp: timeStr,
       content
     };
@@ -416,7 +416,7 @@ export function AppProvider({ children }) {
       patientId,
       patientName: patient?.name || patientId,
       description: `Clinical tele-observation note added: "${content.slice(0, 45)}..."`,
-      actor: 'Sarah Johnson (Tele-ICU)',
+      actor: 'Pooja Patel (Tele-ICU)',
       badge: 'badge-teal'
     });
 

@@ -153,13 +153,13 @@ export default function Sidebar({ collapsed, setCollapsed, mobileOpen, setMobile
           <div className="flex items-center gap-2.5 min-w-0">
             <div className="relative">
               <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center font-bold text-xs text-white">
-                SJ
+                PP
               </div>
               <span className="absolute bottom-0 right-0 w-2 h-2 rounded-full bg-emerald-500 border-2 border-[#14243A]" />
             </div>
             {(!collapsed || mobileOpen) && (
               <div className="min-w-0">
-                <p className="text-xs font-semibold text-white truncate">Sarah Johnson</p>
+                <p className="text-xs font-semibold text-white truncate">Pooja Patel</p>
                 <p className="text-[11px] text-slate-400 truncate">Tele-ICU Nurse</p>
               </div>
             )}

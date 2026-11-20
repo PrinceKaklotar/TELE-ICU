@@ -8,7 +8,7 @@ export default function TaskModal({ isOpen, onClose, initialData = {}, onSubmit 
 
   const [patientId, setPatientId] = useState('');
   const [description, setDescription] = useState('');
-  const [assignedTo, setAssignedTo] = useState('Emily Davis, RN');
+  const [assignedTo, setAssignedTo] = useState('Hetal Patel, RN');
   const [priority, setPriority] = useState('HIGH');
   const [dueTime, setDueTime] = useState('Within 15 mins');
   const [notes, setNotes] = useState('');
@@ -17,7 +17,7 @@ export default function TaskModal({ isOpen, onClose, initialData = {}, onSubmit 
     if (initialData) {
       setPatientId(initialData.patientId || (patients[0]?.id || ''));
       setDescription(initialData.prefillDesc || initialData.description || '');
-      setAssignedTo(initialData.assignedTo || 'Emily Davis, RN');
+      setAssignedTo(initialData.assignedTo || 'Hetal Patel, RN');
       setPriority(initialData.priority || 'HIGH');
       setDueTime(initialData.dueTime || 'Within 15 mins');
       setNotes(initialData.notes || '');
@@ -89,10 +89,10 @@ export default function TaskModal({ isOpen, onClose, initialData = {}, onSubmit 
               onChange={(e) => setAssignedTo(e.target.value)}
               className="w-full px-3 py-2 rounded-xl border border-slate-200 dark:border-[#243552] bg-white dark:bg-[#121c2e] text-slate-900 dark:text-white text-xs sm:text-sm focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 outline-none"
             >
-              <option value="Emily Davis, RN">Emily Davis, RN (Bedside)</option>
-              <option value="James Wilson, RN">James Wilson, RN (Bedside)</option>
-              <option value="Dr. Michael Brown, MD">Dr. Michael Brown, MD (Remote Doctor)</option>
-              <option value="Sarah Johnson, RN">Sarah Johnson, RN (Tele-ICU Lead)</option>
+              <option value="Hetal Patel, RN">Hetal Patel, RN (Bedside)</option>
+              <option value="Chirag Shah, RN">Chirag Shah, RN (Bedside)</option>
+              <option value="Dr. Rajesh Shah, MD">Dr. Rajesh Shah, MD (Remote Doctor)</option>
+              <option value="Pooja Patel, RN">Pooja Patel, RN (Tele-ICU Lead)</option>
             </select>
           </div>
 

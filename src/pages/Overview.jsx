@@ -25,7 +25,7 @@ export default function Overview() {
       <div className="rounded-2xl bg-[#14243A] text-white p-5 lg:px-6 lg:py-4.5 border border-[#243552] shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h2 className="text-xl lg:text-2xl font-bold tracking-tight text-white">
-            Good evening, Sarah
+            Good evening, Pooja
           </h2>
           <p className="text-xs text-slate-300 mt-0.5">
             ICU monitoring overview

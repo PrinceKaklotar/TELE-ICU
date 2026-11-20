@@ -245,11 +245,11 @@ export default function TopNavbar({ setMobileOpen }) {
             <Link
               to="/settings"
               className="flex items-center gap-2 p-1 rounded-xl hover:bg-slate-100 dark:hover:bg-[#1a2d48] transition-colors"
-              title="Sarah Johnson (Tele-ICU Nurse)"
+              title="Pooja Patel (Tele-ICU Nurse)"
               aria-label="User Profile Settings"
             >
               <div className="w-8 h-8 rounded-full bg-blue-600 text-white font-semibold text-xs flex items-center justify-center">
-                SJ
+                PP
               </div>
             </Link>
           </div>

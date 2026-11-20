@@ -4,9 +4,9 @@ export const INITIAL_FOLLOWUPS = [
   {
     id: "TSK-301",
     patientId: "ICU-003",
-    patientName: "Arthur Pendelton",
+    patientName: "Ramesh Patel",
     description: "Verify norepinephrine central line infusion rate and titrate for MAP >= 65. Repeat blood gas in 30 mins.",
-    assignedTo: "Emily Davis, RN",
+    assignedTo: "Hetal Patel, RN",
     priority: "HIGH", // HIGH | MEDIUM | LOW
     status: "PENDING", // PENDING | IN_PROGRESS | COMPLETED
     createdTime: "12 mins ago",
@@ -17,9 +17,9 @@ export const INITIAL_FOLLOWUPS = [
   {
     id: "TSK-302",
     patientId: "ICU-005",
-    patientName: "David Chen",
+    patientName: "Bhavesh Joshi",
     description: "Initiate non-invasive positive pressure ventilation (BIPAP 12/6 cmH2O) and administer IV Furosemide 80mg push.",
-    assignedTo: "Emily Davis, RN",
+    assignedTo: "Hetal Patel, RN",
     priority: "HIGH",
     status: "PENDING",
     createdTime: "20 mins ago",
@@ -30,9 +30,9 @@ export const INITIAL_FOLLOWUPS = [
   {
     id: "TSK-303",
     patientId: "ICU-002",
-    patientName: "Marcus Aurelius Vance",
+    patientName: "Raj Dobariya",
     description: "Perform serial neurological assessment & repeat arterial blood gas following high-flow cannula increase.",
-    assignedTo: "James Wilson, RN",
+    assignedTo: "Chirag Shah, RN",
     priority: "MEDIUM",
     status: "IN_PROGRESS",
     createdTime: "40 mins ago",
@@ -43,9 +43,9 @@ export const INITIAL_FOLLOWUPS = [
   {
     id: "TSK-304",
     patientId: "ICU-006",
-    patientName: "Clara Oswald",
+    patientName: "Dipti Mehta",
     description: "Check second peripheral blood culture results and review nephrotoxic medication clearances with clinical pharmacist.",
-    assignedTo: "Dr. Michael Brown, MD",
+    assignedTo: "Dr. Rajesh Shah, MD",
     priority: "MEDIUM",
     status: "IN_PROGRESS",
     createdTime: "1 hour ago",
@@ -56,9 +56,9 @@ export const INITIAL_FOLLOWUPS = [
   {
     id: "TSK-305",
     patientId: "ICU-001",
-    patientName: "Eleanor Vance",
+    patientName: "Hansaben Patel",
     description: "Post-extubation swallow evaluation and step-down discharge readiness checklist review.",
-    assignedTo: "Emily Davis, RN",
+    assignedTo: "Hetal Patel, RN",
     priority: "LOW",
     status: "COMPLETED",
     createdTime: "2.5 hours ago",
@@ -69,9 +69,9 @@ export const INITIAL_FOLLOWUPS = [
   {
     id: "TSK-306",
     patientId: "ICU-007",
-    patientName: "Robert MacIntyre",
+    patientName: "Mansukhbhai Prajapati",
     description: "Inspect right femoral puncture dressing for hematoma or thrill; record bilateral pedal pulses.",
-    assignedTo: "James Wilson, RN",
+    assignedTo: "Chirag Shah, RN",
     priority: "LOW",
     status: "COMPLETED",
     createdTime: "3 hours ago",

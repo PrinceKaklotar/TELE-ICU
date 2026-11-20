@@ -4,7 +4,7 @@
 export const INITIAL_PATIENTS = [
   {
     id: "ICU-001",
-    name: "Eleanor Vance",
+    name: "Hansaben Patel",
     age: 64,
     gender: "Female",
     bed: "Bed 01-A",
@@ -27,8 +27,8 @@ export const INITIAL_PATIENTS = [
       temperatureUnit: "°C",
       prevTemperature: 36.9
     },
-    assignedNurse: "Emily Davis, RN",
-    remoteDoctor: "Dr. Michael Brown, MD",
+    assignedNurse: "Hetal Patel, RN",
+    remoteDoctor: "Dr. Rajesh Shah, MD",
     admissionReason: "Post-op coronary bypass observation (Day 3)",
     lastUpdated: "Just now",
     lastUpdatedTimestamp: Date.now() - 35000,
@@ -36,15 +36,15 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-1",
-        author: "Sarah Johnson (Tele-ICU)",
-        timestamp: "2026-11-16 20:30",
+        author: "Pooja Patel (Tele-ICU)",
+        timestamp: "2026-11-20 20:30",
         content: "Extubation confirmed stable. Continuous rhythm monitoring nominal. Urine output within normal limits."
       }
     ]
   },
   {
     id: "ICU-002",
-    name: "Marcus Aurelius Vance",
+    name: "Raj Dobariya",
     age: 58,
     gender: "Male",
     bed: "Bed 02-B",
@@ -67,8 +67,8 @@ export const INITIAL_PATIENTS = [
       temperatureUnit: "°C",
       prevTemperature: 37.8
     },
-    assignedNurse: "James Wilson, RN",
-    remoteDoctor: "Dr. Michael Brown, MD",
+    assignedNurse: "Chirag Shah, RN",
+    remoteDoctor: "Dr. Rajesh Shah, MD",
     admissionReason: "Severe Community-Acquired Pneumonia with low FiO2 response",
     lastUpdated: "1 min ago",
     lastUpdatedTimestamp: Date.now() - 65000,
@@ -76,15 +76,15 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-2",
-        author: "Dr. Michael Brown",
-        timestamp: "2026-11-16 21:15",
+        author: "Dr. Rajesh Shah",
+        timestamp: "2026-11-20 21:15",
         content: "Elevated temp and tachypnea noted. High-flow nasal cannula adjusted to 40L, FiO2 0.50. Re-eval ABG in 1 hour."
       }
     ]
   },
   {
     id: "ICU-003",
-    name: "Arthur Pendelton",
+    name: "Ramesh Patel",
     age: 71,
     gender: "Male",
     bed: "Bed 03-A",
@@ -107,8 +107,8 @@ export const INITIAL_PATIENTS = [
       temperatureUnit: "°C",
       prevTemperature: 38.6
     },
-    assignedNurse: "Emily Davis, RN",
-    remoteDoctor: "Dr. Michael Brown, MD",
+    assignedNurse: "Hetal Patel, RN",
+    remoteDoctor: "Dr. Rajesh Shah, MD",
     admissionReason: "Septic Shock secondary to perforated diverticulum with hypotension",
     lastUpdated: "Just now",
     lastUpdatedTimestamp: Date.now() - 15000,
@@ -116,15 +116,15 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-3",
-        author: "Sarah Johnson (Tele-ICU)",
-        timestamp: "2026-11-16 22:45",
+        author: "Pooja Patel (Tele-ICU)",
+        timestamp: "2026-11-20 22:45",
         content: "Urgent: Tachycardia worsening, MAP < 65. Norepinephrine titrated up. Bedside RN notified immediately via secure comms."
       }
     ]
   },
   {
     id: "ICU-004",
-    name: "Sofia Rodriguez",
+    name: "Priya Desai",
     age: 49,
     gender: "Female",
     bed: "Bed 04-A",
@@ -147,8 +147,8 @@ export const INITIAL_PATIENTS = [
       temperatureUnit: "°C",
       prevTemperature: 36.7
     },
-    assignedNurse: "James Wilson, RN",
-    remoteDoctor: "Dr. Michael Brown, MD",
+    assignedNurse: "Chirag Shah, RN",
+    remoteDoctor: "Dr. Rajesh Shah, MD",
     admissionReason: "Acute subarachnoid hemorrhage post-coiling (Neurological monitoring)",
     lastUpdated: "3 mins ago",
     lastUpdatedTimestamp: Date.now() - 180000,
@@ -156,15 +156,15 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-4",
-        author: "James Wilson, RN",
-        timestamp: "2026-11-16 21:00",
+        author: "Chirag Shah, RN",
+        timestamp: "2026-11-20 21:00",
         content: "GCS 15. Pupils equal and reactive. Strict SBP target < 130 maintained."
       }
     ]
   },
   {
     id: "ICU-005",
-    name: "David Chen",
+    name: "Bhavesh Joshi",
     age: 62,
     gender: "Male",
     bed: "Bed 05-B",
@@ -187,8 +187,8 @@ export const INITIAL_PATIENTS = [
       temperatureUnit: "°C",
       prevTemperature: 37.1
     },
-    assignedNurse: "Emily Davis, RN",
-    remoteDoctor: "Dr. Michael Brown, MD",
+    assignedNurse: "Hetal Patel, RN",
+    remoteDoctor: "Dr. Rajesh Shah, MD",
     admissionReason: "Acute Decompensated Heart Failure with Flash Pulmonary Edema",
     lastUpdated: "Just now",
     lastUpdatedTimestamp: Date.now() - 25000,
@@ -196,15 +196,15 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-5",
-        author: "Dr. Michael Brown",
-        timestamp: "2026-11-16 22:50",
+        author: "Dr. Rajesh Shah",
+        timestamp: "2026-11-20 22:50",
         content: "BIPAP initiation recommended. IV Furosemide 80mg push ordered. Monitor continuous desat alarm."
       }
     ]
   },
   {
     id: "ICU-006",
-    name: "Clara Oswald",
+    name: "Dipti Mehta",
     age: 38,
     gender: "Female",
     bed: "Bed 06-A",
@@ -227,8 +227,8 @@ export const INITIAL_PATIENTS = [
       temperatureUnit: "°C",
       prevTemperature: 38.0
     },
-    assignedNurse: "James Wilson, RN",
-    remoteDoctor: "Dr. Michael Brown, MD",
+    assignedNurse: "Chirag Shah, RN",
+    remoteDoctor: "Dr. Rajesh Shah, MD",
     admissionReason: "Severe pyelonephritis with impending urosepsis",
     lastUpdated: "2 mins ago",
     lastUpdatedTimestamp: Date.now() - 120000,
@@ -236,15 +236,15 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-6",
-        author: "James Wilson, RN",
-        timestamp: "2026-11-16 22:10",
+        author: "Chirag Shah, RN",
+        timestamp: "2026-11-20 22:10",
         content: "Blood cultures drawn from 2 sites. IV Meropenem started. Temperature spiking."
       }
     ]
   },
   {
     id: "ICU-007",
-    name: "Robert MacIntyre",
+    name: "Mansukhbhai Prajapati",
     age: 75,
     gender: "Male",
     bed: "Bed 07-A",
@@ -267,8 +267,8 @@ export const INITIAL_PATIENTS = [
       temperatureUnit: "°C",
       prevTemperature: 36.8
     },
-    assignedNurse: "Emily Davis, RN",
-    remoteDoctor: "Dr. Michael Brown, MD",
+    assignedNurse: "Hetal Patel, RN",
+    remoteDoctor: "Dr. Rajesh Shah, MD",
     admissionReason: "Post carotid endarterectomy observation",
     lastUpdated: "4 mins ago",
     lastUpdatedTimestamp: Date.now() - 240000,
@@ -276,15 +276,15 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-7",
-        author: "Emily Davis, RN",
-        timestamp: "2026-11-16 20:00",
+        author: "Hetal Patel, RN",
+        timestamp: "2026-11-20 20:00",
         content: "Puncture site intact, no hematoma. Cranial nerve assessment intact."
       }
     ]
   },
   {
     id: "ICU-008",
-    name: "Amina Al-Mansoor",
+    name: "Geeta Dobariya",
     age: 53,
     gender: "Female",
     bed: "Bed 08-B",
@@ -307,8 +307,8 @@ export const INITIAL_PATIENTS = [
       temperatureUnit: "°C",
       prevTemperature: 36.7
     },
-    assignedNurse: "James Wilson, RN",
-    remoteDoctor: "Dr. Michael Brown, MD",
+    assignedNurse: "Chirag Shah, RN",
+    remoteDoctor: "Dr. Rajesh Shah, MD",
     admissionReason: "Transferred to MRI Suite for emergent cranial neuro-imaging",
     lastUpdated: "12 mins ago",
     lastUpdatedTimestamp: Date.now() - 720000,
@@ -316,8 +316,8 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-8",
-        author: "James Wilson, RN",
-        timestamp: "2026-11-16 23:05",
+        author: "Chirag Shah, RN",
+        timestamp: "2026-11-20 23:05",
         content: "Patient escorted to MRI suite by transport RN. Telemetry temporarily unhooked with physician order."
       }
     ]
