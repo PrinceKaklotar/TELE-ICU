@@ -37,11 +37,24 @@ export function AppProvider({ children }) {
     setTheme(prev => (prev === 'light' ? 'dark' : 'light'));
   };
 
-  // Patients state
+  // Patients state (v3 with Bhavin Shah as Tele-ICU lead)
   const [patients, setPatients] = useState(() => {
     try {
-      const saved = localStorage.getItem('tele_icu_patients');
-      return saved ? JSON.parse(saved) : INITIAL_PATIENTS;
+      localStorage.removeItem('tele_icu_patients');
+      localStorage.removeItem('tele_icu_v2_patients');
+      const saved = localStorage.getItem('tele_icu_v3_patients');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const hasStaleNames = parsed.some(p =>
+          p.name === 'Arthur Pendelton' ||
+          p.name === 'Eleanor Vance' ||
+          p.name === 'David Chen' ||
+          p.name === 'Marcus Aurelius Vance' ||
+          p.notes?.some(n => n.author?.includes('Pooja Patel') || n.author?.includes('Sarah Johnson'))
+        );
+        if (!hasStaleNames) return parsed;
+      }
+      return INITIAL_PATIENTS;
     } catch {
       return INITIAL_PATIENTS;
     }
@@ -49,7 +62,7 @@ export function AppProvider({ children }) {
 
   useEffect(() => {
     try {
-      localStorage.setItem('tele_icu_patients', JSON.stringify(patients));
+      localStorage.setItem('tele_icu_v3_patients', JSON.stringify(patients));
     } catch (e) {
       console.warn(e);
     }
@@ -63,8 +76,21 @@ export function AppProvider({ children }) {
   // Alerts state
   const [alerts, setAlerts] = useState(() => {
     try {
-      const saved = localStorage.getItem('tele_icu_alerts');
-      return saved ? JSON.parse(saved) : INITIAL_ALERTS;
+      localStorage.removeItem('tele_icu_alerts');
+      localStorage.removeItem('tele_icu_v2_alerts');
+      const saved = localStorage.getItem('tele_icu_v3_alerts');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const hasStaleNames = parsed.some(a =>
+          a.patientName === 'Arthur Pendelton' ||
+          a.patientName === 'Eleanor Vance' ||
+          a.assignedNurse === 'Emily Davis, RN' ||
+          a.acknowledgedBy?.includes('Pooja Patel') ||
+          a.resolvedBy?.includes('Pooja Patel')
+        );
+        if (!hasStaleNames) return parsed;
+      }
+      return INITIAL_ALERTS;
     } catch {
       return INITIAL_ALERTS;
     }
@@ -72,7 +98,7 @@ export function AppProvider({ children }) {
 
   useEffect(() => {
     try {
-      localStorage.setItem('tele_icu_alerts', JSON.stringify(alerts));
+      localStorage.setItem('tele_icu_v3_alerts', JSON.stringify(alerts));
     } catch (e) {
       console.warn(e);
     }
@@ -81,8 +107,20 @@ export function AppProvider({ children }) {
   // Follow-ups state
   const [followups, setFollowups] = useState(() => {
     try {
-      const saved = localStorage.getItem('tele_icu_followups');
-      return saved ? JSON.parse(saved) : INITIAL_FOLLOWUPS;
+      localStorage.removeItem('tele_icu_followups');
+      localStorage.removeItem('tele_icu_v2_followups');
+      const saved = localStorage.getItem('tele_icu_v3_followups');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const hasStaleNames = parsed.some(f =>
+          f.patientName === 'Eleanor Vance' ||
+          f.assignedTo === 'Emily Davis, RN' ||
+          f.assignedTo === 'James Wilson, RN' ||
+          f.assignedTo?.includes('Pooja Patel')
+        );
+        if (!hasStaleNames) return parsed;
+      }
+      return INITIAL_FOLLOWUPS;
     } catch {
       return INITIAL_FOLLOWUPS;
     }
@@ -90,7 +128,7 @@ export function AppProvider({ children }) {
 
   useEffect(() => {
     try {
-      localStorage.setItem('tele_icu_followups', JSON.stringify(followups));
+      localStorage.setItem('tele_icu_v3_followups', JSON.stringify(followups));
     } catch (e) {
       console.warn(e);
     }
@@ -99,8 +137,22 @@ export function AppProvider({ children }) {
   // Conversations state
   const [conversations, setConversations] = useState(() => {
     try {
-      const saved = localStorage.getItem('tele_icu_conversations');
-      return saved ? JSON.parse(saved) : INITIAL_CONVERSATIONS;
+      localStorage.removeItem('tele_icu_conversations');
+      localStorage.removeItem('tele_icu_v2_conversations');
+      const saved = localStorage.getItem('tele_icu_v3_conversations');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const hasStale = parsed.some(c =>
+          c.messages?.some(m =>
+            m.senderName === 'Sarah Johnson' ||
+            m.senderName === 'Emily Davis' ||
+            m.senderName === 'Pooja Patel' ||
+            m.senderId === 'user-pooja'
+          )
+        );
+        if (!hasStale) return parsed;
+      }
+      return INITIAL_CONVERSATIONS;
     } catch {
       return INITIAL_CONVERSATIONS;
     }
@@ -108,7 +160,7 @@ export function AppProvider({ children }) {
 
   useEffect(() => {
     try {
-      localStorage.setItem('tele_icu_conversations', JSON.stringify(conversations));
+      localStorage.setItem('tele_icu_v3_conversations', JSON.stringify(conversations));
     } catch (e) {
       console.warn(e);
     }
@@ -117,8 +169,20 @@ export function AppProvider({ children }) {
   // Activity audit log
   const [activities, setActivities] = useState(() => {
     try {
-      const saved = localStorage.getItem('tele_icu_activities');
-      return saved ? JSON.parse(saved) : INITIAL_ACTIVITIES;
+      localStorage.removeItem('tele_icu_activities');
+      localStorage.removeItem('tele_icu_v2_activities');
+      const saved = localStorage.getItem('tele_icu_v3_activities');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const hasStale = parsed.some(a =>
+          a.actor === 'Sarah Johnson, RN' ||
+          a.actor === 'Dr. Michael Brown, MD' ||
+          a.actor === 'Emily Davis, RN' ||
+          a.actor?.includes('Pooja Patel')
+        );
+        if (!hasStale) return parsed;
+      }
+      return INITIAL_ACTIVITIES;
     } catch {
       return INITIAL_ACTIVITIES;
     }
@@ -126,7 +190,7 @@ export function AppProvider({ children }) {
 
   useEffect(() => {
     try {
-      localStorage.setItem('tele_icu_activities', JSON.stringify(activities));
+      localStorage.setItem('tele_icu_v3_activities', JSON.stringify(activities));
     } catch (e) {
       console.warn(e);
     }
@@ -232,7 +296,7 @@ export function AppProvider({ children }) {
           ...a,
           status: 'ACKNOWLEDGED',
           acknowledgedAt: 'Just now',
-          acknowledgedBy: 'Pooja Patel (Tele-ICU)'
+          acknowledgedBy: 'Bhavin Shah (Tele-ICU)'
         };
       }
       return a;
@@ -243,7 +307,7 @@ export function AppProvider({ children }) {
       patientId: alert.patientId,
       patientName: alert.patientName,
       description: `Alert ${alert.id} (${alert.type}) acknowledged. Tele-ICU nurse reviewed event.`,
-      actor: 'Pooja Patel (Tele-ICU)',
+      actor: 'Bhavin Shah (Tele-ICU)',
       badge: 'badge-purple'
     });
 
@@ -264,7 +328,7 @@ export function AppProvider({ children }) {
           ...a,
           status: 'RESOLVED',
           resolvedAt: 'Just now',
-          resolvedBy: 'Pooja Patel (Tele-ICU)',
+          resolvedBy: 'Bhavin Shah (Tele-ICU)',
           resolutionNote
         };
       }
@@ -276,7 +340,7 @@ export function AppProvider({ children }) {
       patientId: alert.patientId,
       patientName: alert.patientName,
       description: `Alert ${alert.id} resolved: ${resolutionNote || 'Clinical event documented and resolved.'}`,
-      actor: 'Pooja Patel (Tele-ICU)',
+      actor: 'Bhavin Shah (Tele-ICU)',
       badge: 'badge-green'
     });
 
@@ -304,7 +368,7 @@ export function AppProvider({ children }) {
       patientId: newTask.patientId,
       patientName: newTask.patientName,
       description: `Follow-up ${newTask.id} assigned to ${newTask.assignedTo}: ${newTask.description.slice(0, 50)}...`,
-      actor: 'Pooja Patel (Tele-ICU)',
+      actor: 'Bhavin Shah (Tele-ICU)',
       badge: 'badge-amber'
     });
 
@@ -330,7 +394,7 @@ export function AppProvider({ children }) {
         patientId: task.patientId,
         patientName: task.patientName,
         description: `Task ${task.id} updated to status "${newStatus}".`,
-        actor: 'Pooja Patel (Tele-ICU)',
+        actor: 'Bhavin Shah (Tele-ICU)',
         badge: newStatus === 'COMPLETED' ? 'badge-green' : 'badge-blue'
       });
     }
@@ -358,8 +422,8 @@ export function AppProvider({ children }) {
     const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     const newMsg = {
       id: `m-${Date.now()}`,
-      senderId: 'user-pooja',
-      senderName: 'Pooja Patel',
+      senderId: 'user-bhavin',
+      senderName: 'Bhavin Shah',
       senderRole: 'Tele-ICU Nurse',
       text: text.trim(),
       timestamp: timeStr,
@@ -384,7 +448,7 @@ export function AppProvider({ children }) {
         patientId: targetConv.patientId,
         patientName: targetConv.patientName,
         description: `Sent message to ${targetConv.teamMember.name}: "${text.slice(0, 40)}..."`,
-        actor: 'Pooja Patel (Tele-ICU)',
+        actor: 'Bhavin Shah (Tele-ICU)',
         badge: 'badge-blue'
       });
     }
@@ -395,7 +459,7 @@ export function AppProvider({ children }) {
     const timeStr = `${new Date().toISOString().slice(0, 10)} ${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
     const newNote = {
       id: `note-${Date.now()}`,
-      author: 'Pooja Patel (Tele-ICU)',
+      author: 'Bhavin Shah (Tele-ICU)',
       timestamp: timeStr,
       content
     };
@@ -416,7 +480,7 @@ export function AppProvider({ children }) {
       patientId,
       patientName: patient?.name || patientId,
       description: `Clinical tele-observation note added: "${content.slice(0, 45)}..."`,
-      actor: 'Pooja Patel (Tele-ICU)',
+      actor: 'Bhavin Shah (Tele-ICU)',
       badge: 'badge-teal'
     });
 

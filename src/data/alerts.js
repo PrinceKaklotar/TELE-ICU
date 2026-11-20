@@ -66,7 +66,7 @@ export const INITIAL_ALERTS = [
     assignedTo: "Chirag Shah, RN",
     status: "ACKNOWLEDGED",
     acknowledgedAt: "25 mins ago",
-    acknowledgedBy: "Pooja Patel (Tele-ICU)",
+    acknowledgedBy: "Bhavin Shah (Tele-ICU)",
     resolvedAt: null,
     resolvedBy: null
   },
@@ -83,7 +83,7 @@ export const INITIAL_ALERTS = [
     assignedTo: "Chirag Shah, RN",
     status: "ACKNOWLEDGED",
     acknowledgedAt: "40 mins ago",
-    acknowledgedBy: "Pooja Patel (Tele-ICU)",
+    acknowledgedBy: "Bhavin Shah (Tele-ICU)",
     resolvedAt: null,
     resolvedBy: null
   },
@@ -100,7 +100,7 @@ export const INITIAL_ALERTS = [
     assignedTo: "Hetal Patel, RN",
     status: "RESOLVED",
     acknowledgedAt: "55 mins ago",
-    acknowledgedBy: "Pooja Patel (Tele-ICU)",
+    acknowledgedBy: "Bhavin Shah (Tele-ICU)",
     resolvedAt: "20 mins ago",
     resolvedBy: "Hetal Patel, RN"
   },
@@ -117,8 +117,8 @@ export const INITIAL_ALERTS = [
     assignedTo: "Chirag Shah, RN",
     status: "RESOLVED",
     acknowledgedAt: "1h 50m ago",
-    acknowledgedBy: "Pooja Patel (Tele-ICU)",
+    acknowledgedBy: "Bhavin Shah (Tele-ICU)",
     resolvedAt: "1h 10m ago",
-    resolvedBy: "Pooja Patel (Tele-ICU)"
+    resolvedBy: "Bhavin Shah (Tele-ICU)"
   }
 ];

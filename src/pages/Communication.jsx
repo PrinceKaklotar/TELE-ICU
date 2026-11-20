@@ -187,7 +187,7 @@ export default function Communication() {
               {/* Message History */}
               <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-slate-50/20 dark:bg-[#121c2e]/20">
                 {activeConversation.messages.map((msg) => {
-                  const isMine = msg.senderId === 'user-pooja';
+                  const isMine = msg.senderId === 'user-bhavin';
 
                   return (
                     <div

@@ -36,7 +36,7 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-1",
-        author: "Pooja Patel (Tele-ICU)",
+        author: "Bhavin Shah (Tele-ICU)",
         timestamp: "2026-11-20 20:30",
         content: "Extubation confirmed stable. Continuous rhythm monitoring nominal. Urine output within normal limits."
       }
@@ -116,7 +116,7 @@ export const INITIAL_PATIENTS = [
     notes: [
       {
         id: "note-3",
-        author: "Pooja Patel (Tele-ICU)",
+        author: "Bhavin Shah (Tele-ICU)",
         timestamp: "2026-11-20 22:45",
         content: "Urgent: Tachycardia worsening, MAP < 65. Norepinephrine titrated up. Bedside RN notified immediately via secure comms."
       }

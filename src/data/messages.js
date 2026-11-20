@@ -2,10 +2,10 @@
 
 export const TEAM_MEMBERS = [
   {
-    id: "user-pooja",
-    name: "Pooja Patel",
+    id: "user-bhavin",
+    name: "Bhavin Shah",
     role: "Tele-ICU Nurse",
-    avatar: "PP",
+    avatar: "BS",
     status: "online",
     badgeColor: "bg-emerald-500"
   },
@@ -60,8 +60,8 @@ export const INITIAL_CONVERSATIONS = [
     messages: [
       {
         id: "m-101",
-        senderId: "user-pooja",
-        senderName: "Pooja Patel",
+        senderId: "user-bhavin",
+        senderName: "Bhavin Shah",
         senderRole: "Tele-ICU Nurse",
         text: "Hetal, ICU-003 Ramesh's heart rate has climbed to 138 bpm with BP 84/52. MAP is 62. Telemetry shows sustained sinus tachycardia.",
         timestamp: "23:18",
@@ -72,7 +72,7 @@ export const INITIAL_CONVERSATIONS = [
         senderId: "user-hetal",
         senderName: "Hetal Patel",
         senderRole: "Bedside ICU Nurse",
-        text: "Copy that Pooja. I am at the bedside right now. Checking peripheral perfusion and flushing IV lines. Norepinephrine titration started.",
+        text: "Copy that Bhavin. I am at the bedside right now. Checking peripheral perfusion and flushing IV lines. Norepinephrine titration started.",
         timestamp: "23:20",
         status: "read"
       },
@@ -111,8 +111,8 @@ export const INITIAL_CONVERSATIONS = [
     messages: [
       {
         id: "m-201",
-        senderId: "user-pooja",
-        senderName: "Pooja Patel",
+        senderId: "user-bhavin",
+        senderName: "Bhavin Shah",
         senderRole: "Tele-ICU Nurse",
         text: "Desaturation alert triggered for Bhavesh Joshi. SpO2 dropped to 89% with RR 28. Dr. Shah recommended BIPAP initiation.",
         timestamp: "23:08",
@@ -144,8 +144,8 @@ export const INITIAL_CONVERSATIONS = [
     messages: [
       {
         id: "m-301",
-        senderId: "user-pooja",
-        senderName: "Pooja Patel",
+        senderId: "user-bhavin",
+        senderName: "Bhavin Shah",
         senderRole: "Tele-ICU Nurse",
         text: "Chirag, temp spiked to 38.2°C for Raj Dobariya. High-flow nasal cannula flow was increased.",
         timestamp: "22:52",
@@ -177,8 +177,8 @@ export const INITIAL_CONVERSATIONS = [
     messages: [
       {
         id: "m-401",
-        senderId: "user-pooja",
-        senderName: "Pooja Patel",
+        senderId: "user-bhavin",
+        senderName: "Bhavin Shah",
         senderRole: "Tele-ICU Nurse",
         text: "Dr. Shah, Hansaben Patel is 6 hours post-extubation, hemodynamically very stable. Step-down bed request placed.",
         timestamp: "22:15",

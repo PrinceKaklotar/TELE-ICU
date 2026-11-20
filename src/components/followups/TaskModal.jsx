@@ -92,7 +92,7 @@ export default function TaskModal({ isOpen, onClose, initialData = {}, onSubmit 
               <option value="Hetal Patel, RN">Hetal Patel, RN (Bedside)</option>
               <option value="Chirag Shah, RN">Chirag Shah, RN (Bedside)</option>
               <option value="Dr. Rajesh Shah, MD">Dr. Rajesh Shah, MD (Remote Doctor)</option>
-              <option value="Pooja Patel, RN">Pooja Patel, RN (Tele-ICU Lead)</option>
+              <option value="Bhavin Shah, RN">Bhavin Shah, RN (Tele-ICU Lead)</option>
             </select>
           </div>
 

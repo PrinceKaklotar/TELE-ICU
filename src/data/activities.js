@@ -31,7 +31,7 @@ export const INITIAL_ACTIVITIES = [
     patientId: "ICU-005",
     patientName: "Bhavesh Joshi",
     description: "Follow-up TSK-302 created: Initiate BIPAP and IV Furosemide 80mg push.",
-    actor: "Pooja Patel (Tele-ICU)",
+    actor: "Bhavin Shah (Tele-ICU)",
     badge: "badge-amber"
   },
   {
@@ -64,7 +64,7 @@ export const INITIAL_ACTIVITIES = [
     patientId: "ICU-006",
     patientName: "Dipti Mehta",
     description: "WARNING Alert ALT-8085 acknowledged by Tele-ICU station: Borderline hypoxemia.",
-    actor: "Pooja Patel (Tele-ICU)",
+    actor: "Bhavin Shah (Tele-ICU)",
     badge: "badge-purple"
   },
   {
